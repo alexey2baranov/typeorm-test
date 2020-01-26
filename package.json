@@ -21,8 +21,8 @@
     "start": "ts-node src/index.ts",
     "test": "jest --watchAll --testTimeout 10000 --runInBand --detectOpenHandles",
     "db": "docker-compose up",
-    "undb": "docker-compose down",
-    "bash": "docker exec -it oracle12 bash -c 'source /home/oracle/.bashrc; sqlplus /nolog'"
+    "db:stop": "docker-compose down",
+    "db:bash": "docker exec -it oracle12 bash -c 'source /home/oracle/.bashrc; sqlplus /nolog'"
   },
   "jest": {
     "modulePathIgnorePatterns": [
