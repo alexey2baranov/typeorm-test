@@ -1,4 +1,5 @@
-# Awesome Project Build with TypeORM
+# Issue github
+ ## id does not assigned
 
 Steps to run this project:
 
@@ -15,4 +16,4 @@ Steps to run this project:
    GRANT CREATE SESSION TO  C##SOVA
 ```
 
-4. Run `npm test`
+4. Run `npm test` 
