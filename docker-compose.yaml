@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  oracle:
+    image: store/oracle/database-enterprise:12.2.0.1-slim
+    ports:
+      - 1521:1521
+      - 5500:5500
+    volumes:
+      - oracle-12-slim:/opt/oracle/oradata
+volumes:
+  oracle-12-slim:

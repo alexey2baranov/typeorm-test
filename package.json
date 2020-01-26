@@ -1,0 +1,48 @@
+{
+  "name": "typeorm-test",
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^13.5.0",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.0.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "oracledb": "^4.2.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.22"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "jest --watchAll --testTimeout 10000 --runInBand --detectOpenHandles",
+    "db": "docker-compose up",
+    "undb": "docker-compose down",
+    "bash": "docker exec -it oracle12 bash -c 'source /home/oracle/.bashrc; sqlplus /nolog'"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/data",
+      "/home/alexey/WebstormProjects/typeorm-test/data/TEST",
+      "<rootDir>/data/TEST",
+      "<rootDir>/data/**/*.*"
+    ],
+    "globalSetup": [],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "<rootDir>/test/**/.+test.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
